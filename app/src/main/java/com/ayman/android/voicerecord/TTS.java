@@ -41,7 +41,8 @@ public class TTS extends AppCompatActivity implements TextToSpeech.OnInitListene
     @Override
     public void onInit(int status) {
         if(status==TextToSpeech.SUCCESS){
-            int result=tts.setLanguage(Locale.UK);
+            //int result=tts.setLanguage(Locale.UK);
+            int result =tts.setLanguage(Locale.forLanguageTag("ar-SA"));
             if (result==TextToSpeech.LANG_MISSING_DATA
                     ||result==TextToSpeech.LANG_NOT_SUPPORTED){
                 Log.e("TTS","Not Supported");
